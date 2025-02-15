@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Transport API Test</title>
+</head>
+<body>
+    <h1 id="stationTitle">From:</h1>
+
+    <label for="stationSelect">Station:</label>
+    <select id="stationSelect" onchange="switchDestination()">
+        <option value="Zürich, Rathaus">Rathaus</option>
+        <option value="Zürich, Toni-Areal" selected>Toni-Areal</option>
+    </select>
+
+    <label for="destinationSelect">Destination:</label>
+    <select id="destinationSelect">
+        <option value="Zürich, Toni-Areal">Toni-Areal</option>
+        <option value="Zürich, Rathaus" selected>Rathaus</option>
+    </select>
+
+    <button onclick="fetchStationBoard()">Get Connections</button>
+
+    <div id="displayContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
