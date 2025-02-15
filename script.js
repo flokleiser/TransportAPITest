@@ -1,22 +1,29 @@
-function switchDestination() {
-    const stationSelect = document.getElementById('stationSelect');
-    const destinationSelect = document.getElementById('destinationSelect');
+// function switchDestination() {
+//     const stationSelect = document.getElementById('stationSelect');
+//     const destinationSelect = document.getElementById('destinationSelect');
 
-    const selectedStation = stationSelect.value;
-    for (let option of destinationSelect.options) {
-        if (option.value !== selectedStation) {
-            destinationSelect.value = option.value;
-            break;
-        }
-    }
-}
+//     // const selectedStation = stationSelect.value;
+//     // const selectedStation = "Zürich, Toni-Areal"
+//     for (let option of destinationSelect.options) {
+//         if (option.value !== selectedStation) {
+//             destinationSelect.value = option.value;
+//             break;
+//         }
+//     }
+// }
+
+    const selectedStation = "Zürich, Toni-Areal"
+    const destinationSelect = "Zürich, Rathaus"
 
 async function fetchStationBoard() {
-    const stationName = document.getElementById('stationSelect').value;
-    const destination = document.getElementById('destinationSelect').value;
+    // const stationName = document.getElementById('stationSelect').value;
+    // const destination = document.getElementById('destinationSelect').value;
 
-    const stationTitle = stationName.replace("Zürich, ", "");
-    document.getElementById('stationTitle').textContent = `From: ${stationTitle}`;
+    const stationName = "Zürich, Toni-Areal"
+    const destination = "Zürich, Rathaus"
+
+    // const stationTitle = stationName.replace("Zürich, ", "");
+    // document.getElementById('stationTitle').textContent = `From: ${stationTitle}`;
 
     const apiUrl = `https://transport.opendata.ch/v1/stationboard?station=${encodeURIComponent(stationName)}&limit=10`;
 
