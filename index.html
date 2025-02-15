@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
     <title>Transport API Test</title>
 </head>
 <body>
     <h1 id="stationTitle">From:</h1>
 
     <label for="stationSelect">Station:</label>
-    <select id="stationSelect" onchange="switchDestination()">
+    <select id="stationSelect" onchange="switchDestination(), fetchStationBoard()">
         <option value="Zürich, Rathaus">Rathaus</option>
         <option value="Zürich, Toni-Areal" selected>Toni-Areal</option>
     </select>
@@ -21,7 +23,8 @@
         <option value="Zürich, Rathaus" selected>Rathaus</option>
     </select>
 
-    <button onclick="fetchStationBoard()">Get Connections</button>
+    <!-- <button onclick="fetchStationBoard()">Get Connections</button> -->
+    <!-- fetchStationBoard() -->
 
     <div id="displayContainer"></div>
 

@@ -13,8 +13,17 @@ body {
     background-color: #f4f4f4;
     margin: 5px auto;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 150px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#depText{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #displayContainer {
@@ -29,3 +38,12 @@ body {
     margin:100px;
     font-family: 'JetBrains Mono', monospace;
 }
+
+.material-icons.md-36 {
+    font-size: 36px; 
+    margin:0;
+   }
+ .material-symbols-outlined.md-36 {
+    font-size: 36px; 
+    margin:0;
+   }

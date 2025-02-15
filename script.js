@@ -2,9 +2,7 @@ function switchDestination() {
     const stationSelect = document.getElementById('stationSelect');
     const destinationSelect = document.getElementById('destinationSelect');
 
-    // Get selected station
     const selectedStation = stationSelect.value;
-    // Get the other option as the destination
     for (let option of destinationSelect.options) {
         if (option.value !== selectedStation) {
             destinationSelect.value = option.value;
@@ -51,11 +49,15 @@ function displayConnections(connections, destination) {
     const list = document.createElement("ul");
 
     filteredConnections.slice(0, 3).forEach((connection) => {
-        const departureTime = new Date(connection.stop.departure).toLocaleTimeString();
+        const departureTime = new Date(connection.stop.departure).toLocaleTimeString("de-CH", {hour: '2-digit', minute: '2-digit'});
         const listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>Dep:</strong> ${departureTime}`;
+        // listItem.innerHTML = `<strong>Dep:</strong> ${departureTime}`;
+        listItem.innerHTML = `<i class='material-symbols-outlined md-36'>Tram</i> <strong id=depText> ${departureTime}`;
         list.appendChild(listItem);
+        console.log(departureTime);
     });
 
     displayContainer.appendChild(list);
 }
+
+fetchStationBoard()
