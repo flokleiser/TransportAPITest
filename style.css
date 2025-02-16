@@ -1,8 +1,19 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* body {
     font-family: 'JetBrains Mono', monospace;
     text-align: center;
     margin: 20px;
-}
+} */
 
 #displayContainer ul {
     list-style: none;
